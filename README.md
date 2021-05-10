@@ -1,0 +1,1 @@
+# Alakzatok-K-T-A-V
