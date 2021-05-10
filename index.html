@@ -2,16 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Alakzatok</title>
 </head>
 <body>
+  <h1>Alakzatok Kerülete, Trülete, Felszíne és Térfogata</h1>
     <div class="card" style="width:400px">
-        <img class="card-img-top" src="négyzet.jpg" alt="négyzet">
+        <img class="card-img-top" src="téglalap.jpg" alt="téglalap">
         <div class="card-body">
-          <h4 class="card-title">John Doe</h4>
-          <p class="card-text">Some example text.</p>
+          <h1 class="card-title">téglalap</h1>
+          <p class="card-text">
+            <script>
+              function calculate() {
+                  var aOldal = document.téglatest.aOldal.value,
+                      bOldal = document.téglatest.bOldal.value
+                  var Terület = aOldal * bOldal 
+                  var Kerület = 2 * aOldal + 2 * bOldal
+                  document.getElementById("result").innerText = `Terület: ${Terület}\nKerület: ${Kerület}`;
+              }
+          </script>
+      </head>
+      <body>
+          <form name="téglalap" onsubmit="calculate(); return false;">
+              <label>a oldal:
+                  <br><input type="number" name="aOldal" required>
+              </label><br>
+              <label>b oldal:
+                  <br><input type="number" name="bOldal" required>
+              </label><br>
+              <br><input type="submit" value="Calculate">
+          </form>
+          <p id="result"></p>
+          </p>
+        </div>
+        </div>
+          
+          <div class="card" style="width:400px">
+            <img class="card-img-top" src="téglatest.jpg" alt="négyzet">
+            <div class="card-body">
+              <h4 class="card-title">Téglatest</h4>
+              <p class="card-text">
+                <script>
+                  function calculate2() {
+                      var aOldal = document.téglatest.aOldal.value,
+                          bOldal = document.téglatest.bOldal.value,
+                          cOldal = document.téglatest.cOldal.value;
+      
+                      var Térfogat = aOldal * bOldal * cOldal 
+                      var Felszín = 2 * (aOldal * bOldal + bOldal * cOldal + aOldal * cOldal)
+                      document.getElementById("result").innerText = `Térfogat: ${Térfogat}\nFelszín: ${Felszín}`;
+                  }
+              </script>
+              <form name="téglatest" onsubmit="calculate2(); return false;">
+                  <label>a oldal:
+                      <br><input type="number" name="aOldal" required>
+                  </label><br>
+                  <label>b oldal:
+                      <br><input type="number" name="bOldal" required>
+                  </label><br>
+                  <label>c oldal:
+                      <br><input type="number" name="cOldal" required>
+                  </label><br>
+                  <br><input type="submit" value="Számolás">
+              </form>
+              <p id="result"></p>
+            </div>
+            </div>
+          </p>
         </div>
       </div>
 </body>
