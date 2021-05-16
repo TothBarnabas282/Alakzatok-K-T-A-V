@@ -4,76 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>Alakzatok</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <title>Document</title>
 </head>
 <body>
-  <h1>Alakzatok Kerülete, Trülete, Felszíne és Térfogata</h1>
+<div class="card-deck" style="padding-bottom: 50px; color:black">
     <div class="card" style="width:400px">
-        <img class="card-img-top" src="téglalap.jpg" alt="téglalap">
+        <img class="card-img-top" src="téglalap.jpg" alt="Téglalap">
         <div class="card-body">
-          <h1 class="card-title">téglalap</h1>
+          <h3 class="card-title">Téglalap</h3>
           <p class="card-text">
-            <script>
-              function calculate() {
-                  var aOldal = document.téglatest.aOldal.value,
-                      bOldal = document.téglatest.bOldal.value
-                  var Terület = aOldal * bOldal 
-                  var Kerület = 2 * aOldal + 2 * bOldal
-                  document.getElementById("result").innerText = `Terület: ${Terület}\nKerület: ${Kerület}`;
-              }
-          </script>
-      </head>
-      <body>
-          <form name="téglalap" onsubmit="calculate(); return false;">
-              <label>a oldal:
-                  <br><input type="number" name="aOldal" required>
-              </label><br>
-              <label>b oldal:
-                  <br><input type="number" name="bOldal" required>
-              </label><br>
-              <br><input type="submit" value="Calculate">
-          </form>
-          <p id="result"></p>
+            A oldal
+            <br>
+            <input type="number" id="aOldal" placeholder="cm" required>
+            <br>
+            <br>
+            B oldal
+            <br>
+            <input type="number" id="bOldal" placeholder="cm" required>
+            <br>
+            <br>
+            <button onclick="kerület()">Kerülete</button>
+            
+            <button onclick="terület()">Területe</button>
+            <br>
+            <br>
+            <h1 id="válasz"></h1>
           </p>
+         
         </div>
-        </div>
-          
-          <div class="card" style="width:400px">
-            <img class="card-img-top" src="téglatest.jpg" alt="négyzet">
-            <div class="card-body">
-              <h4 class="card-title">Téglatest</h4>
-              <p class="card-text">
-                <script>
-                  function calculate2() {
-                      var aOldal = document.téglatest.aOldal.value,
-                          bOldal = document.téglatest.bOldal.value,
-                          cOldal = document.téglatest.cOldal.value;
-      
-                      var Térfogat = aOldal * bOldal * cOldal 
-                      var Felszín = 2 * (aOldal * bOldal + bOldal * cOldal + aOldal * cOldal)
-                      document.getElementById("result").innerText = `Térfogat: ${Térfogat}\nFelszín: ${Felszín}`;
-                  }
-              </script>
-              <form name="téglatest" onsubmit="calculate2(); return false;">
-                  <label>a oldal:
-                      <br><input type="number" name="aOldal" required>
-                  </label><br>
-                  <label>b oldal:
-                      <br><input type="number" name="bOldal" required>
-                  </label><br>
-                  <label>c oldal:
-                      <br><input type="number" name="cOldal" required>
-                  </label><br>
-                  <br><input type="submit" value="Számolás">
-              </form>
-              <p id="result"></p>
-            </div>
-            </div>
+      </div>
+
+    <div class="card" style="width:400px">
+        <img class="card-img-top" src="téglatest.jpg" alt="Téglatest">
+        <div class="card-body">
+          <h3 class="card-title">Téglatest</h3>
+          <p class="card-text">
+            A oldal
+            <br>
+            <input type="number" id="TaOldal" placeholder="cm" required>
+            <br>
+            <br>
+            B oldal
+            <br>
+            <input type="number" id="TbOldal" placeholder="cm" required>
+            <br>
+            <br>
+            C oldal
+            <br>
+            <input type="number" id="TcOldal" placeholder="cm" required>
+            <br>
+            <br>
+            <button onclick="felszín()">Felszíne</button>
+            <button onclick="térfogat()">Térfogata</button>   
+            <br>
+            <br>
+            <h1 id="Tválasz"></h1> 
           </p>
         </div>
       </div>
+
+      <div class="card" style="width:400px">
+        <img class="card-img-top" src="háromszög.jpg" alt="Háromszög">
+        <div class="card-body">
+          <h3 class="card-title">Háromszög</h3>
+          <p class="card-text">
+            A oldal
+            <br>
+            <input type="number" id="HaOldal" placeholder="cm" required>
+            <br>
+            <br>
+            B oldal
+            <br>
+            <input type="number" id="HbOldal" placeholder="cm" required>
+            <br>
+            <br>
+            C oldal
+            <br>
+            <input type="number" id="HcOldal" placeholder="cm" required>
+            <br>
+            <br>
+            Magasság
+            <br>
+            <input type="number" id="Ma" placeholder="cm" required>
+            <br>
+            <br>
+            <button onclick="Hkerület()">Kerülete</button>
+            <button onclick="Hterület()">Területe</button>   
+            <br>
+            <br>
+            <h1 id="Hválasz"></h1> 
+          </p>
+        </div>
+      </div>
+
+      <div class="card" style="width:400px">
+        <img class="card-img-top" src="piramis.jpg" alt="Háromszög">
+        <div class="card-body">
+          <h3 class="card-title">Piramis</h3>
+          <p class="card-text">
+            A oldal
+            <br>
+            <input type="number" id="PaOldal" placeholder="cm" required>
+            <br>
+            <br>
+            Magasság (Oldal)
+            <br>
+            <input type="number" id="Mo" placeholder="cm" required>
+            <br>
+            <br>
+            Magasság (Alap)
+            <br>
+            <input type="number" id="PMa" placeholder="cm" required>
+            <br>
+            <br>
+            <button onclick="Pfelszín()">Felszíne</button>
+            <button onclick="Ptérfogat()">Térfogata</button>   
+            <br>
+            <br>
+            <h1 id="Pválasz"></h1> 
+          </p>
+        </div>
+      </div>
+
+
+</div>     
 </body>
 </html>
