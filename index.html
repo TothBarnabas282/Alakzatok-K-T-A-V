@@ -7,12 +7,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <title>Document</title>
 </head>
 <body>
+  <div class="cím">
+  <p>Geometrikus Kalkulátor</p>
+  <h4>Készítette: Tóth Barnabás</h4>
+  </div>
+  <br>
 <div class="card-deck" style="padding-bottom: 50px; color:black">
-    <div class="card" style="width:400px">
+    <div class="card" style="width:100px">
         <img class="card-img-top" src="téglalap.jpg" alt="Téglalap">
         <div class="card-body">
           <h3 class="card-title">Téglalap</h3>
@@ -38,7 +44,7 @@
         </div>
       </div>
 
-    <div class="card" style="width:400px">
+    <div class="card" style="width:100px">
         <img class="card-img-top" src="téglatest.jpg" alt="Téglatest">
         <div class="card-body">
           <h3 class="card-title">Téglatest</h3>
@@ -47,27 +53,24 @@
             <br>
             <input type="number" id="TaOldal" placeholder="cm" required>
             <br>
-            <br>
             B oldal
             <br>
             <input type="number" id="TbOldal" placeholder="cm" required>
             <br>
-            <br>
             C oldal
             <br>
-            <input type="number" id="TcOldal" placeholder="cm" required>
+            <input type="number" id="TcOldal" placeholder="cm" requiredy>
             <br>
             <br>
             <button onclick="felszín()">Felszíne</button>
             <button onclick="térfogat()">Térfogata</button>   
-            <br>
             <br>
             <h1 id="Tválasz"></h1> 
           </p>
         </div>
       </div>
 
-      <div class="card" style="width:400px">
+      <div class="card" style="width:200px">
         <img class="card-img-top" src="háromszög.jpg" alt="Háromszög">
         <div class="card-body">
           <h3 class="card-title">Háromszög</h3>
@@ -76,16 +79,13 @@
             <br>
             <input type="number" id="HaOldal" placeholder="cm" required>
             <br>
-            <br>
             B oldal
             <br>
             <input type="number" id="HbOldal" placeholder="cm" required>
             <br>
-            <br>
             C oldal
             <br>
             <input type="number" id="HcOldal" placeholder="cm" required>
-            <br>
             <br>
             Magasság
             <br>
@@ -101,7 +101,7 @@
         </div>
       </div>
 
-      <div class="card" style="width:400px">
+      <div class="card" style="width:200px">
         <img class="card-img-top" src="piramis.jpg" alt="Háromszög">
         <div class="card-body">
           <h3 class="card-title">Piramis</h3>
@@ -110,11 +110,9 @@
             <br>
             <input type="number" id="PaOldal" placeholder="cm" required>
             <br>
-            <br>
             Magasság (Oldal)
             <br>
             <input type="number" id="Mo" placeholder="cm" required>
-            <br>
             <br>
             Magasság (Alap)
             <br>
@@ -123,7 +121,6 @@
             <br>
             <button onclick="Pfelszín()">Felszíne</button>
             <button onclick="Ptérfogat()">Térfogata</button>   
-            <br>
             <br>
             <h1 id="Pválasz"></h1> 
           </p>

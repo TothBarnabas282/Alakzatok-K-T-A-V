@@ -1,0 +1,14 @@
+body {
+    background-image: url(háttér.jpg);
+}
+
+.card {
+    height: 800px;
+    width: 100px;
+}
+
+.cím {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+}
